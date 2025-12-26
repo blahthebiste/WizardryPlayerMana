@@ -63,7 +63,7 @@ public class EventsHandler extends EventsBase {
             GlStateManager.enableBlend();
             Minecraft.getMinecraft().getTextureManager().bindTexture(bar_mana);
             int left = (event.getResolution().getScaledWidth() / 2 + 91) + Tales.mp.manaPoolX;
-            int height = GuiIngameForge.right_height + 10;
+            int height = GuiIngameForge.right_height + 20;
             int y = (event.getResolution().getScaledHeight() - height) - Tales.mp.manaPoolY;
             double mana = soul.getMP();
             double maxMana = soul.getMaxMP();

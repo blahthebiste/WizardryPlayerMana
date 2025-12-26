@@ -17,11 +17,11 @@ public class Tales {
 
     public static class ManaPoolSystem {
 
-        @Config.Comment("If it is true - then we see mana pool as bar")
+        @Config.Comment("If it is true - then we see a mana pool bar")
         @Config.Name("0: Bar")
         public boolean manaPoolBar = true;
 
-        @Config.Comment("If it is true - then we see mana pool as bar")
+        @Config.Comment("If it is true - then we see a numerical reading of current mana")
         @Config.Name("0: Numbers")
         public boolean manaPoolNumber = true;
 
@@ -42,10 +42,11 @@ public class Tales {
         public boolean isCastingCostBased = true;
 
         @Config.Comment("If it is true - then if your mana is near 0, you'll get debuffs.")
-        @Config.Name("Are you get debuff when mana is low? ")
+        @Config.Name("Do you get debuff when mana is low? ")
         public boolean lowOnMana = true;
+
         @Config.RangeDouble(min = 0.0D)
-        @Config.Comment({"Allows to change cost of using spells, by multiplying final cost on this value (cost * this)",
+        @Config.Comment({"Allows to change the mana cost of spells, by multiplying their final cost by this value (cost * this)",
                 "Cost of spell is calculated: this * (Spell-Tier * Spell-Tier)", "So setting it to 0.0 will make spellcasting not use Mana Pool at all"})
         @Config.Name("1: Spell Cost Multiplier")
         public double spell_multiplier = 1.0D;
